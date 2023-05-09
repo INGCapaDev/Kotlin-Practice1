@@ -38,6 +38,9 @@ class MainActivity : ComponentActivity() {
             txtName.requestFocus()
         }
 
+        btnExit.setOnClickListener {
+            finish()
+        }
 
     }
 }
