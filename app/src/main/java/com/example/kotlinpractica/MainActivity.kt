@@ -23,7 +23,6 @@ class MainActivity : ComponentActivity() {
         lblGreeting = findViewById(R.id.lblGreeting) as TextView
 
         btnGreeting.setOnClickListener {
-
             if (txtName.text.toString().contentEquals("")){
                 Toast.makeText(applicationContext, "Data capture required", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -32,6 +31,13 @@ class MainActivity : ComponentActivity() {
             val greeting:String = "Hello " + txtName.text.toString() + " How are you?"
             lblGreeting.text = greeting
         }
+
+        btnClear.setOnClickListener {
+            lblGreeting.text = ""
+            txtName.setText("")
+            txtName.requestFocus()
+        }
+
 
     }
 }
